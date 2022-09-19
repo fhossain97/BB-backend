@@ -15,6 +15,7 @@ import django_heroku
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+from .database import * 
 import environ
 
 env = environ.Env()
