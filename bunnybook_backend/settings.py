@@ -116,7 +116,8 @@ WSGI_APPLICATION = 'bunnybook_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bunnybook',
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
