@@ -15,7 +15,6 @@ import django_heroku
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-from .database import * 
 import environ
 
 env = environ.Env()
@@ -117,8 +116,8 @@ WSGI_APPLICATION = 'bunnybook_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.postgresql',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bunnybook',
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
