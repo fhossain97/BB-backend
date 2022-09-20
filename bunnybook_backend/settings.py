@@ -88,7 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "https://bunnyback.herokuapp.com/bunnybook/"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "https://bunnyback.herokuapp.com"]
 
 ROOT_URLCONF = 'bunnybook_backend.urls'
 
