@@ -1,1 +1,1 @@
-web: gunicorn bunnybook_backend.wsgi --log -file -
+web: gunicorn bunnybook_backend.wsgi
