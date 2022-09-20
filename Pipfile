@@ -15,6 +15,7 @@ gunicorn = "*"
 django-cors-headers = "*"
 django-environ = "*"
 jwt = "*"
+bcrypt = "*"
 
 [dev-packages]
 
