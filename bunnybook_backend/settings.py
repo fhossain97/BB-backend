@@ -114,19 +114,18 @@ WSGI_APPLICATION = 'bunnybook_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'bunnybook',
-#         # 'USER': 'bunnybookuser',
-#         # 'PASSWORD': 'bunnybook',
-#         # 'HOST': 'localhost'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bunnybook',
+        'USER': 'bunnybookuser',
+        'PASSWORD': 'bunnybook',
+        'HOST': 'localhost'
 
-#     }
-# }
+    }
+}
 
-DATABASES = {  }
+# DATABASES = {  }
 
 
 
