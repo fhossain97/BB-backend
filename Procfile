@@ -1,1 +1,0 @@
-web: gunicorn bunnybook_backend.wsgi

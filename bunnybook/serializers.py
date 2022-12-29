@@ -8,12 +8,12 @@ from cloudinary.forms import CloudinaryJsFileField
 User = get_user_model()
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
-    comments = serializers.HyperlinkedRelatedField(
+    comment = serializers.HyperlinkedRelatedField(
         view_name='comment-detail',
         many=True,
         read_only=True
     )
-    # file = serializers.FileField()
+
     file = CloudinaryJsFileField(
     attrs = { 'multiple': 1 })
 
@@ -51,10 +51,10 @@ class UserSerializer(serializers.ModelSerializer):
         if password != password_confirmation:
             raise serializers.ValidationError({'password_confirmation': 'Passwords do not match'})
 
-        # try:
-        #     validations.validate_password(password=password)
-        # except ValidationError as err:
-        #     raise serializers.ValidationError({'password': err.messages})
+        try:
+            validations.validate_password(password=password)
+        except ValidationError as err:
+            raise serializers.ValidationError({'password': err.messages})
 
         data['password'] = make_password(password)
         return data
