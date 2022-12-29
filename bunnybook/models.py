@@ -13,7 +13,7 @@ class Post(models.Model):
         return f"{self.status_body} on {self.date}"
     
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'post_id': self.id})
+        return reverse('post_detail', kwargs={'post_id': self.id})
 
 #comment
 class Comment(models.Model):
