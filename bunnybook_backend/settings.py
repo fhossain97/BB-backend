@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
 import environ
 
 env = environ.Env()
@@ -33,7 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS =  ['*']
 
 # Application definition
 
@@ -63,11 +63,11 @@ REST_FRAMEWORK = {
     ],
 }
 
-cloudinary.config( 
-  cloud_name = env('CLOUDINARY_CLOUD_NAME'), 
-  api_key = env('CLOUDINARY_API_KEY'),
-  api_secret = env('CLOUDINARY_API_SECRET')
-)
+# cloudinary.config( 
+#   cloud_name = env('CLOUDINARY_CLOUD_NAME'), 
+#   api_key = env('CLOUDINARY_API_KEY'),
+#   api_secret = env('CLOUDINARY_API_SECRET')
+# )
 
 CORS_ALLOW_HEADERS = (
         'x-requested-with',
@@ -88,7 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "https://bunnyfront.herokuapp.com"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 
 ROOT_URLCONF = 'bunnybook_backend.urls'
 
@@ -177,4 +177,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
