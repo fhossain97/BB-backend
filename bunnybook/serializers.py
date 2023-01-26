@@ -14,6 +14,7 @@ class PostSerializer(serializers.HyperlinkedModelSerializer):
         view_name="comment_detail", many=True, read_only=True
     )
 
+
     file = CloudinaryJsFileField(attrs={"multiple": 1})
 
     class Meta:
