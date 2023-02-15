@@ -10,7 +10,7 @@ class Post(models.Model):
     file = CloudinaryField(resource_type='', default='No File', null=True)
 
     def __str__(self):
-        return f"{self.status_body} on {self.date}"
+        return f"{self.status_body} on {self.date} on {self.file}"
     
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'post_id': self.id})

@@ -59,6 +59,5 @@ class LoginView(APIView):
         user = self.get_user(email)
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid credentials'})
-
         token = jwt.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
         return Response({'token': token, 'username':  user.username} )
