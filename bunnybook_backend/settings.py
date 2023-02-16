@@ -98,7 +98,7 @@ DATABASES = {
         'NAME': 'bunnybook',
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
-        'HOST': 'localhost'
+        'HOST': 'db'
 
     }
 }
