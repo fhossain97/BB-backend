@@ -33,13 +33,11 @@ class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class RegisterView(APIView):
-
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({'message': 'Registration successful'})
-
         return Response(serializer.errors, status=422)
 
 
@@ -60,4 +58,5 @@ class LoginView(APIView):
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid credentials'})
         token = jwt.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
+        print(token)
         return Response({'token': token, 'username':  user.username} )
