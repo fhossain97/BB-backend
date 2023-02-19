@@ -11,6 +11,7 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 from .serializers import UserSerializer
+
 User = get_user_model()
 
 

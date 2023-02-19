@@ -98,6 +98,8 @@ DATABASES = {
         'NAME': 'bunnybook',
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
+        'HOST': '',
+        'PORT': ''
 
     }
 }
