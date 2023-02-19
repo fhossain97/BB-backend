@@ -99,7 +99,7 @@ DATABASES = {
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
         # 'HOST': 'localhost'
-        'HOST': 'tmp/.s.PGSQL.5432'
+        # 'HOST': 'tmp/.s.PGSQL.5432'
 
     }
 }
