@@ -98,9 +98,7 @@ DATABASES = {
         'NAME': 'bunnybook',
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
-        'HOST': '',
-        'PORT': '',
-        'SOCKET': '/tmp/.s.PGSQL.5432'
+        'HOST': '/tmp/.s.PGSQL.5432'
 
     }
 }
