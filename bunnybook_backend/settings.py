@@ -96,13 +96,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'bunnybook',
-        # 'USER': 'bunnybookuser',
-        'PASSWORD': 'bunnybook',
-        # 'HOST': 'localhost'
-        # 'HOST': 'tmp/.s.PGSQL.5432'
-
-
-
+        'USER': 'bunnybookuser',
+        'PASSWORD': 'bunnybook'
     }
 }
 
