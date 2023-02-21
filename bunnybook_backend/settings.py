@@ -89,21 +89,21 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bunnybook_backend.wsgi.application'
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'bunnybook',
-#         'USER': 'bunnybookuser',
-#         'PASSWORD': 'bunnybook',
-#         'HOST': '',
-#         'PORT' :''
-#     }
-# }
-DATABASE_URL=env('DATABASE_URL')
-
 DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bbdatabase',
+        'USER': 'bbuser',
+        'PASSWORD': 'bbuser',
+        # 'HOST': '',
+        # 'PORT' :''
+    }
 }
+# DATABASE_URL=env('DATABASE_URL')
+
+# DATABASES = {
+#     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+# }
 
 
 AUTH_PASSWORD_VALIDATORS = [
