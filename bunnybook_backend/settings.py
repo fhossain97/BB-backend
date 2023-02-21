@@ -136,6 +136,6 @@ USE_TZ = False
 
 
 STATIC_URL = 'static/'
-# STATIC_ROOT = "static"
+STATIC_ROOT = "static"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
