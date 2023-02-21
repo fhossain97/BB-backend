@@ -9,7 +9,8 @@ from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
 from django.conf import settings
-import jwt
+# import jwt 
+from jwt import PyJWT
 from .serializers import UserSerializer
 
 User = get_user_model()
@@ -58,6 +59,6 @@ class LoginView(APIView):
         user = self.get_user(email)
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid credentials'})
-        token = jwt.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
+        token =  PyJWT.encode({'sub': user.id}, settings.SECRET_KEY, algorithm='HS256')
         print(token)
         return Response({'token': token, 'username':  user.username} )
