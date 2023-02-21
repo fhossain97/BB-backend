@@ -66,7 +66,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://0.0.0.0:6609/"]
 
 ROOT_URLCONF = 'bunnybook_backend.urls'
 
