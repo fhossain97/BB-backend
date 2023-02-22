@@ -2,13 +2,23 @@
 Bunnybook is a playful take on the ever so popular Facebook. Instead of connecting humans together, Bunnybook connects all bunnies together. Each bunny is able to login/logout via token and GitHub authentication. Bunny users can create, update, and delete their posts and can upload images as well. Additionally, bunnies are able to message one another just like facebook!
 
 # Links
-Github Front-End: https://github.com/fhossain97/Bunnybook
-Github Back-End: https://github.com/fhossain97/BB-backend
+- Github Front-End: https://github.com/fhossain97/Bunnybook
+- Github Back-End: https://github.com/fhossain97/BB-backend
+
+# Deployment
+- Front-end: https://boisterous-pika-2b511c.netlify.app
+- Back-end: https://bb-backend-production.up.railway.app/bunnybook/posts
 
 # Technologies 
 - Frontend: React.js
 - Backend: Django and Django Rest Framework
 - Additional: Cloudinary (image upload), Tidio (widget for customer communication), Firebase (for messenger and GitHub authentication), and APIs (NY times and random friends)
+
+# Video Walkthrough
+
+<img src='./bb.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 # MVP (user)
 - As a user, I want to create my own username and password
@@ -33,3 +43,4 @@ Following various documentations for Django and React. Referencing facebook and 
 # Future Code
 - Implement Strech Goals
 - Needs additional abstract user model 
+- Update token authentication
