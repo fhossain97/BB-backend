@@ -89,16 +89,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bunnybook_backend.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bunnybook',
-        'USER': 'bunnybookuser',
-        'PASSWORD': 'bunnybook',
-        'HOST': '',
-        'PORT' :'5432'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'bunnybook',
+#         'USER': 'bunnybookuser',
+#         'PASSWORD': 'bunnybook',
+#         'HOST': '',
+#         'PORT' :'5432'
+#     }
+# }
 DATABASE_URL=env('DATABASE_URL')
 
 DATABASES = {
