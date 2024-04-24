@@ -96,7 +96,7 @@ DATABASES = {
         'USER': 'bunnybookuser',
         'PASSWORD': 'bunnybook',
         'HOST': '',
-        'PORT' :''
+        'PORT' :'5432'
     }
 }
 DATABASE_URL=env('DATABASE_URL')
